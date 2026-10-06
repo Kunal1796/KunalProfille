@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>DevPortfolio - Full Stack Developer</title>
+    <title>Kunal Dongare | React &amp; React Native Full Stack Engineer</title>
+    <meta name="description" content="Kunal Dongare, full stack engineer in Pune with 2.5+ years of React, React Native and Node.js experience. Available immediately for React Native, React, MERN and Forward Deployed Engineer roles." />
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link
@@ -14,29 +15,8 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#0d7ff2",
-                        "background-light": "#f5f7f8",
-                        "background-dark": "#101922",
-                        "card-dark": "#1C252E",
-                        "card-hover": "#252e38",
-                        "border-color": "#283039",
-                    },
-                    fontFamily: {
-                        "display": ["Inter", "sans-serif"],
-                        "body": ["Noto Sans", "sans-serif"],
-                    },
-                    borderRadius: { "DEFAULT": "1rem", "lg": "1.5rem", "xl": "2rem", "full": "9999px" },
-                },
-            },
-        }
-    </script>
+    <link rel="stylesheet" href="assets/layout.css" />
+
     <style>
         html {
             scroll-behavior: smooth;
@@ -45,7 +25,10 @@
         .timeline-gradient {
             background: linear-gradient(to bottom, #0d7ff2 0%, #283039 100%);
         }
+    a:focus-visible, button:focus-visible { outline: 2px solid #0d7ff2; outline-offset: 4px; }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }
     </style>
+    <link rel="stylesheet" href="assets/portfolio.css" />
 </head>
 
 <body
@@ -55,7 +38,7 @@
             <header class="flex items-center justify-between h-16 md:h-20">
                 <div class="flex items-center gap-3">
                     <div class="size-9 rounded-full bg-primary/20 flex items-center justify-center text-primary">
-                        <span class="material-symbols-outlined">terminal</span>
+                        <span aria-hidden="true" style="font-family:monospace;font-weight:700">&lt;/&gt;</span>
                     </div>
                     <h2 class="text-white text-lg font-bold tracking-tight">Kunal Dongare</h2>
                 </div>
@@ -77,10 +60,10 @@
                         Download Resume
                     </a>
                 </div>
-                <button class="md:hidden text-white p-2">
-                    <span class="material-symbols-outlined">menu</span>
+                <button id="menu-toggle" class="md:hidden text-white p-2" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-nav">
+                    <span aria-hidden="true">☰</span>
                 </button>
-            </header>
+            </header><nav id="mobile-nav" class="hidden md:hidden pb-5 flex flex-wrap gap-5" aria-label="Mobile navigation"><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a><a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer">Resume ↗</a></nav>
         </div>
     </div>
     <main class="flex-grow flex flex-col items-center w-full">
@@ -92,19 +75,18 @@
                         class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                     <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
                 </span>
-                Open to Opportunities
+                Available immediately · Pune, India
             </div>
             <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                Crafting digital experiences<br /><span class="text-slate-500">one commit at a time.</span>
+                React. React Native. Full stack.<br /><span class="text-slate-400">From architecture to release.</span>
             </h1>
             <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-10">
-                Full-Stack Developer with exactly 2 years of professional experience building scalable web and mobile
-                applications using React, React Native, Node.js, and AWS serverless technologies.
+                I’m Kunal Dongare, a full stack engineer with 2.5+ years of experience owning web and mobile products. I build with React, React Native, TypeScript, and Node.js — from APIs and payment integrations to production support and app releases.
             </p>
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a class="w-full sm:w-auto bg-white text-background-dark hover:bg-slate-200 font-bold px-8 py-3.5 rounded-full transition-all"
                     href="#projects">
-                    View Work
+                    Explore My Experience
                 </a>
                 <a class="w-full sm:w-auto bg-card-dark border border-border-color text-white hover:border-primary/50 font-bold px-8 py-3.5 rounded-full transition-all"
                     href="#contact">
@@ -112,344 +94,10 @@
                 </a>
             </div>
         </section>
-        <section class="w-full max-w-[960px] px-6 md:px-10 py-20 scroll-mt-20" id="about">
-            <div class="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-12 items-center">
-                <div class="relative justify-self-center md:justify-self-start group w-full max-w-sm">
-                    <div
-                        class="absolute inset-0 bg-primary rounded-[2rem] rotate-6 opacity-20 group-hover:rotate-3 transition-transform duration-300">
-                    </div>
-                    <img alt="Profile Picture"
-                        class="relative z-10 w-full aspect-square object-cover rounded-[1.5rem] shadow-2xl border-2 border-border-color bg-card-dark"
-                        src="assets/images/Profile.jpeg" />
-                </div>
-                <div>
-                    <div class="flex items-center gap-4 mb-6">
-                        <h2 class="text-2xl md:text-3xl font-bold text-white">About Me</h2>
-                        <div class="h-[1px] bg-border-color flex-grow"></div>
-                    </div>
-                    <p class="text-slate-300 text-lg leading-relaxed mb-6 font-body">
-                        Hello! I'm a passionate Full-Stack Developer with 2 years of experience in building digital
-                        products. I specialize in creating performant, user-friendly web and mobile applications using
-                        modern
-                        technologies like React, React Native, Node.js, and Cloud services.
-                    </p>
-                    <p class="text-slate-400 leading-relaxed mb-8 font-body">
-                        Experienced in mentoring junior engineers and freshers, conducting interviews, and driving
-                        team-wide knowledge sharing in Agile environments. Skilled in integrating and consuming REST
-                        APIs / GraphQL, managing state with Redux, and resolving performance bottlenecks.
-                    </p>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div
-                            class="p-5 rounded-xl bg-card-dark border border-border-color hover:border-primary/30 transition-colors">
-                            <span class="block text-3xl font-bold text-primary mb-1">2+</span>
-                            <span class="text-sm text-slate-400 font-medium">Years Experience</span>
-                        </div>
-                        <div
-                            class="p-5 rounded-xl bg-card-dark border border-border-color hover:border-primary/30 transition-colors">
-                            <span class="block text-3xl font-bold text-primary mb-1">5+</span>
-                            <span class="text-sm text-slate-400 font-medium">Projects Completed</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="w-full max-w-[960px] px-6 md:px-10 py-20 scroll-mt-20" id="experience">
-            <div class="flex items-center gap-4 mb-12">
-                <h2 class="text-2xl md:text-3xl font-bold text-white">Professional Journey</h2>
-                <div class="h-[1px] bg-border-color flex-grow"></div>
-            </div>
-            <div class="relative">
-                <div class="group relative grid grid-cols-[auto_1fr] gap-x-6 md:gap-x-10 pb-12 last:pb-0">
-                    <div class="flex flex-col items-center">
-                        <div
-                            class="flex items-center justify-center size-12 rounded-full bg-primary text-white shadow-[0_0_15px_rgba(13,127,242,0.4)] z-10 border-[4px] border-background-dark">
-                            <span class="material-symbols-outlined">work</span>
-                        </div>
-                        <div class="w-[2px] timeline-gradient flex-grow mt-2 h-full rounded-full opacity-80"></div>
-                    </div>
-                    <div class="pt-1">
-                        <div
-                            class="bg-card-dark hover:bg-card-hover transition-all duration-300 rounded-xl p-6 md:p-8 border border-border-color shadow-lg group-hover:shadow-primary/5 group-hover:border-primary/30 relative overflow-hidden">
-                            <div
-                                class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none">
-                            </div>
-                            <div
-                                class="flex flex-col md:flex-row md:items-start md:justify-between gap-3 mb-6 relative z-10">
-                                <div>
-                                    <h3
-                                        class="text-xl font-bold text-white mb-1 group-hover:text-primary transition-colors">
-                                        Software Engineer</h3>
-                                    <div class="flex items-center gap-2 text-slate-300 font-medium">
-                                        <span class="material-symbols-outlined text-[20px] text-primary">domain</span>
-                                        <span>Indexnine Technologies</span>
-                                    </div>
-                                </div>
-                                <div
-                                    class="inline-flex self-start items-center px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-bold border border-primary/20 shadow-sm whitespace-nowrap">
-                                    Jan 2024 - Present
-                                </div>
-                            </div>
-                            <ul class="space-y-3 text-slate-300 mb-8 leading-relaxed list-none relative z-10 font-body">
-                                <li class="flex items-start gap-3">
-                                    <span
-                                        class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
-                                    <span>Led end-to-end development of Dwellin Pro Connect (React Web App), including
-                                        UI architecture and auth flows.</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <span
-                                        class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
-                                    <span>Delivered cross-platform builds for Dwellin (React Native Mobile App),
-                                        optimizing performance.</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <span
-                                        class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
-                                    <span>Developed serverless backend services using AWS Lambda, Node.js, and
-                                        MongoDB.</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <span
-                                        class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
-                                    <span>Implemented Jest unit tests (85%+ coverage) and optimized performance using
-                                        Chrome DevTools.</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <span
-                                        class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
-                                    <span>Built and deployed UI components and APIs for European Athletics (React Native
-                                        App).</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <span
-                                        class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
-                                    <span>Worked on Voyager React Web Application for All My Sons – Movers &
-                                        Packers.</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <span
-                                        class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
-                                    <span>Developed serverless backend services using AWS Lambda, Node.js, and
-                                        MongoDB.</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <span
-                                        class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
-                                    <span>Independently built Driver Tablet App, Check-In / Check-Out App, and Estimator
-                                        App using React
-                                        Native.</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <span
-                                        class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
-                                    <span>Integrated Clover Android SDK via custom React Native bridge.</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <span
-                                        class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
-                                    <span>Implemented Zustand and NativeWind for React Native styling.</span>
-                                </li>
-                            </ul>
-                            <div class="flex flex-wrap gap-2 pt-4 border-t border-white/5">
-                                <span
-                                    class="px-3 py-1 rounded-full bg-[#283039] text-xs font-medium text-slate-200 border border-white/5 hover:bg-primary/20 hover:border-primary/30 transition-colors cursor-default">React
-                                    Native</span>
-                                <span
-                                    class="px-3 py-1 rounded-full bg-[#283039] text-xs font-medium text-slate-200 border border-white/5 hover:bg-primary/20 hover:border-primary/30 transition-colors cursor-default">React.js</span>
-                                <span
-                                    class="px-3 py-1 rounded-full bg-[#283039] text-xs font-medium text-slate-200 border border-white/5 hover:bg-primary/20 hover:border-primary/30 transition-colors cursor-default">AWS
-                                    Lambda</span>
-                                <span
-                                    class="px-3 py-1 rounded-full bg-[#283039] text-xs font-medium text-slate-200 border border-white/5 hover:bg-primary/20 hover:border-primary/30 transition-colors cursor-default">MongoDB</span>
-                                <span
-                                    class="px-3 py-1 rounded-full bg-[#283039] text-xs font-medium text-slate-200 border border-white/5 hover:bg-primary/20 hover:border-primary/30 transition-colors cursor-default">Firebase</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="w-full max-w-[960px] px-6 md:px-10 py-20 scroll-mt-20" id="projects">
-            <div class="flex items-center gap-4 mb-12">
-                <h2 class="text-2xl md:text-3xl font-bold text-white">Featured Projects</h2>
-                <div class="h-[1px] bg-border-color flex-grow"></div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Hackathon Project 1 -->
-                <div
-                    class="bg-card-dark rounded-xl overflow-hidden border border-border-color group hover:border-primary/50 transition-all duration-300 shadow-lg flex flex-col">
-                    <div
-                        class="h-48 overflow-hidden relative bg-[#0f172a] flex items-center justify-center group-hover:bg-[#1e293b] transition-colors">
-                        <span
-                            class="material-symbols-outlined text-6xl text-primary/50 group-hover:text-primary transition-colors">smart_toy</span>
-                        <div
-                            class="absolute inset-0 bg-background-dark/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
-                            <a class="p-2 bg-primary rounded-full text-white hover:bg-blue-600 transition-colors"
-                                href="#" title="View Code"><span class="material-symbols-outlined">code</span></a>
-                            <a class="p-2 bg-white rounded-full text-background-dark hover:bg-gray-200 transition-colors"
-                                href="#" title="View Details"><span
-                                    class="material-symbols-outlined">visibility</span></a>
-                        </div>
-                    </div>
-                    <div class="p-6 flex-grow flex flex-col">
-                        <div class="flex items-center gap-2 mb-2">
-                            <h3 class="text-xl font-bold text-white">Agentic AI Code Companion</h3>
-                            <span
-                                class="px-2 py-0.5 rounded-full bg-yellow-500/20 text-yellow-500 text-[10px] font-bold uppercase tracking-wide border border-yellow-500/30">Hackathon
-                                Winner</span>
-                        </div>
-                        <p class="text-slate-400 text-sm mb-4 line-clamp-3 font-body flex-grow">Created a multi-agent AI
-                            system that analyzes entire codebases to assist developers. It acts as an intelligent pair
-                            programmer, understanding context to explain logic and write accurate code.</p>
-                        <div class="flex flex-wrap gap-2 mt-auto">
-                            <span
-                                class="px-2 py-1 text-xs rounded bg-[#283039] text-slate-300 font-medium">Python</span>
-                            <span
-                                class="px-2 py-1 text-xs rounded bg-[#283039] text-slate-300 font-medium">LangChain</span>
-                            <span class="px-2 py-1 text-xs rounded bg-[#283039] text-slate-300 font-medium">LLMs</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Hackathon Project 2 -->
-                <div
-                    class="bg-card-dark rounded-xl overflow-hidden border border-border-color group hover:border-primary/50 transition-all duration-300 shadow-lg flex flex-col">
-                    <div
-                        class="h-48 overflow-hidden relative bg-[#0f172a] flex items-center justify-center group-hover:bg-[#1e293b] transition-colors">
-                        <span
-                            class="material-symbols-outlined text-6xl text-primary/50 group-hover:text-primary transition-colors">architecture</span>
-                        <div
-                            class="absolute inset-0 bg-background-dark/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
-                            <a class="p-2 bg-primary rounded-full text-white hover:bg-blue-600 transition-colors"
-                                href="#" title="View Code"><span class="material-symbols-outlined">code</span></a>
-                            <a class="p-2 bg-white rounded-full text-background-dark hover:bg-gray-200 transition-colors"
-                                href="#" title="View Details"><span
-                                    class="material-symbols-outlined">visibility</span></a>
-                        </div>
-                    </div>
-                    <div class="p-6 flex-grow flex flex-col">
-                        <div class="flex items-center gap-2 mb-2">
-                            <h3 class="text-xl font-bold text-white">Spec-Driven Modernizer</h3>
-                            <span
-                                class="px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-400 text-[10px] font-bold uppercase tracking-wide border border-blue-500/30">AI
-                                Hackathon</span>
-                        </div>
-                        <p class="text-slate-400 text-sm mb-4 line-clamp-3 font-body flex-grow">Developed a tool for
-                            legacy app modernization. It generates comprehensive specs from legacy code and uses those
-                            specs to automatically scaffold a modern application architecture.</p>
-                        <div class="flex flex-wrap gap-2 mt-auto">
-                            <span class="px-2 py-1 text-xs rounded bg-[#283039] text-slate-300 font-medium">React</span>
-                            <span class="px-2 py-1 text-xs rounded bg-[#283039] text-slate-300 font-medium">AST
-                                Analysis</span>
-                            <span class="px-2 py-1 text-xs rounded bg-[#283039] text-slate-300 font-medium">Generative
-                                AI</span>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="bg-card-dark rounded-xl overflow-hidden border border-border-color group hover:border-primary/50 transition-all duration-300 shadow-lg flex flex-col">
-                    <div class="h-48 overflow-hidden relative">
-                        <img alt="Project 1"
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAErtL43KBqjd8E5H1fCr8pRyIKF7lGGEtCU5rJWQ9KGGKrUgh_g_Qa0O-4G3-U-N-WLVEVvwIkXn9lQKakzGpuxnWBKmsPpuRav4GTFbLwqIskVxstEgqSOiu8HtNTvE_f5wBzmiQPfrJ-Zs57Gh3zBKPEfMAwBCgJCkvygv9pYk5KURSAzRZtsROQ6zEFGA4BT_eO95D3BEaN8mGaEegfYOMem5Da-PXwpcgTk2TlS4Fxl0l2JAY--NJonOKNN3tik936ntyEY0o" />
-                        <div
-                            class="absolute inset-0 bg-background-dark/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
-                            <a class="p-2 bg-primary rounded-full text-white hover:bg-blue-600 transition-colors"
-                                href="#" title="View Code"><span class="material-symbols-outlined">code</span></a>
-                            <a class="p-2 bg-white rounded-full text-background-dark hover:bg-gray-200 transition-colors"
-                                href="#" title="Live Demo"><span class="material-symbols-outlined">visibility</span></a>
-                        </div>
-                    </div>
-                    <div class="p-6 flex-grow flex flex-col">
-                        <h3 class="text-xl font-bold text-white mb-2">Instagram Clone</h3>
-                        <p class="text-slate-400 text-sm mb-4 line-clamp-3 font-body flex-grow">Developed a
-                            full-featured social app replicating core functionalities such as feed, likes, comments, and
-                            profile using React Native. Implemented real-time updates and efficient state management.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mt-auto">
-                            <span class="px-2 py-1 text-xs rounded bg-[#283039] text-slate-300 font-medium">React
-                                Native</span>
-                            <span class="px-2 py-1 text-xs rounded bg-[#283039] text-slate-300 font-medium">Redux</span>
-                            <span
-                                class="px-2 py-1 text-xs rounded bg-[#283039] text-slate-300 font-medium">Node.js</span>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="bg-card-dark rounded-xl overflow-hidden border border-border-color group hover:border-primary/50 transition-all duration-300 shadow-lg flex flex-col">
-                    <div class="h-48 overflow-hidden relative">
-                        <img alt="Project 2"
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvHA5NUacXLJA5xVZSXhDWCi45uQJ41-3n96rLuPoYzrj9tisdCkJQdlPNjnWntHeIMBTYxU4U6ZvBSV3lxygGf-8WAmwm9RvA0YUXWYHrK7h_fY-8AzuRhrWbFAc9L72HM9aA-RkQS6dMyd8rzCOLXN3Ty90w2EG4NkJbfC9bj5SbVNY_6llMljKVG69RlRQWUvqQZI7cul71aGMGV475ba94P9X87YPqJYKADw_XuvGUKeAgNYUmxhdWssn6Jp7iAdpaCi5DdEE" />
-                        <div
-                            class="absolute inset-0 bg-background-dark/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
-                            <a class="p-2 bg-primary rounded-full text-white hover:bg-blue-600 transition-colors"
-                                href="#" title="View Code"><span class="material-symbols-outlined">code</span></a>
-                            <a class="p-2 bg-white rounded-full text-background-dark hover:bg-gray-200 transition-colors"
-                                href="#" title="Live Demo"><span class="material-symbols-outlined">visibility</span></a>
-                        </div>
-                    </div>
-                    <div class="p-6 flex-grow flex flex-col">
-                        <h3 class="text-xl font-bold text-white mb-2">Game Catalog Website</h3>
-                        <p class="text-slate-400 text-sm mb-4 line-clamp-3 font-body flex-grow">Developed a fully
-                            responsive, API-driven game catalog website interacting with RAWG API. Demonstrated
-                            proficiency in data fetching, dynamic UI rendering, and mobile-first design.</p>
-                        <div class="flex flex-wrap gap-2 mt-auto">
-                            <span class="px-2 py-1 text-xs rounded bg-[#283039] text-slate-300 font-medium">React</span>
-                            <span class="px-2 py-1 text-xs rounded bg-[#283039] text-slate-300 font-medium">Axios</span>
-                            <span class="px-2 py-1 text-xs rounded bg-[#283039] text-slate-300 font-medium">RAWG
-                                API</span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-        <section class="w-full max-w-[960px] px-6 md:px-10 py-20 scroll-mt-20" id="skills">
-            <div class="flex items-center gap-4 mb-12">
-                <h2 class="text-2xl md:text-3xl font-bold text-white">Skills &amp; Technologies</h2>
-                <div class="h-[1px] bg-border-color flex-grow"></div>
-            </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div
-                    class="bg-card-dark p-6 rounded-xl border border-border-color hover:border-primary/50 transition-colors flex flex-col items-center gap-3 text-center group cursor-default">
-                    <div
-                        class="p-3 rounded-full bg-[#283039] text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-                        <span class="material-symbols-outlined">html</span>
-                    </div>
-                    <span class="text-slate-200 font-bold">Frontend</span>
-                    <span class="text-xs text-slate-500 font-medium">React, React Native, Redux, Zustand,
-                        NativeWind, Tailwind CSS, Jest</span>
-                </div>
-                <div
-                    class="bg-card-dark p-6 rounded-xl border border-border-color hover:border-primary/50 transition-colors flex flex-col items-center gap-3 text-center group cursor-default">
-                    <div
-                        class="p-3 rounded-full bg-[#283039] text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-                        <span class="material-symbols-outlined">dns</span>
-                    </div>
-                    <span class="text-slate-200 font-bold">Backend</span>
-                    <span class="text-xs text-slate-500 font-medium">Node.js, Flask, GraphQL, AWS Lambda, Jest</span>
-                </div>
-                <div
-                    class="bg-card-dark p-6 rounded-xl border border-border-color hover:border-primary/50 transition-colors flex flex-col items-center gap-3 text-center group cursor-default">
-                    <div
-                        class="p-3 rounded-full bg-[#283039] text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-                        <span class="material-symbols-outlined">database</span>
-                    </div>
-                    <span class="text-slate-200 font-bold">Database</span>
-                    <span class="text-xs text-slate-500 font-medium">MongoDB, Postgres</span>
-                </div>
-                <div
-                    class="bg-card-dark p-6 rounded-xl border border-border-color hover:border-primary/50 transition-colors flex flex-col items-center gap-3 text-center group cursor-default">
-                    <div
-                        class="p-3 rounded-full bg-[#283039] text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-                        <span class="material-symbols-outlined">terminal</span>
-                    </div>
-                    <span class="text-slate-200 font-bold">Tools</span>
-                    <span class="text-xs text-slate-500 font-medium">Git, AWS, Postman, Cursor, Antigravity,
-                        Firebase</span>
-                </div>
-            </div>
-        </section>
+        <section class="w-full max-w-[960px] px-6 md:px-10 py-16 scroll-mt-20" id="about"><div class="flex items-center gap-4 mb-10"><h2 class="text-2xl md:text-3xl font-bold text-white">About Me</h2><div class="h-px bg-border-color flex-grow"></div></div><div class="grid md:grid-cols-[1fr_2fr] gap-10 items-center"><img src="assets/images/Profile.jpg" alt="Kunal Dongare" class="w-full max-w-xs aspect-square object-cover rounded-xl border border-border-color" width="320" height="320" loading="lazy" /><div><p class="text-slate-300 text-lg leading-relaxed mb-5">Based in Pune, India, I worked as a Software Engineer at Indexnine Technologies from January 2024 to August 2026. My work spans client-facing product delivery, mobile ownership, backend development, and production troubleshooting.</p><p class="text-slate-400 leading-relaxed mb-6">I’m looking for React Native, React, MERN, and Forward Deployed Engineer roles where I can turn product requirements into working software and stay involved through delivery. Available to join immediately.</p><div class="grid grid-cols-3 gap-3"><div class="bg-card-dark p-4 rounded-lg"><strong class="block text-primary text-2xl">2.5+</strong><span class="text-sm text-slate-300">Years of experience</span></div><div class="bg-card-dark p-4 rounded-lg"><strong class="block text-primary text-2xl">50+</strong><span class="text-sm text-slate-300">Screens delivered</span></div><div class="bg-card-dark p-4 rounded-lg"><strong class="block text-primary text-2xl">50+</strong><span class="text-sm text-slate-300">APIs built</span></div></div></div></div></section>
+        <section class="w-full max-w-[960px] px-6 md:px-10 py-16 scroll-mt-20" id="experience"><div class="flex items-center gap-4 mb-10"><h2 class="text-2xl md:text-3xl font-bold text-white">Professional Experience</h2><div class="h-px bg-border-color flex-grow"></div></div><div class="mb-8"><h3 class="text-xl font-bold">Software Engineer · Indexnine Technologies</h3><p class="text-slate-400 mt-2">Jan 2024 – Aug 2026 · Pune, India</p><p class="text-slate-400 mt-3">Selected client work. User counts describe the products served.</p></div><div class="space-y-6"><article class="bg-card-dark rounded-xl p-6 md:p-8 border border-border-color"><h3 class="text-xl font-bold mb-2">All My Sons</h3><p class="text-primary text-sm mb-5">US movers &amp; packers · 80k+ users · React Native, React, Node.js, GraphQL</p><ul class="list-disc pl-5 space-y-3 text-slate-300 leading-relaxed font-body"><li>Owned the Driver tablet app and Attendance Management app end to end, across frontend and backend; published the mobile app via MDM.</li><li>Built a custom React Native bridge for the Android-only Clover SDK. Implemented Clover payments and payment reconciliation webhooks for the Voyager enterprise website.</li><li>Delivered 5–6 major Voyager features and built two micro websites from scratch, with five screens each.</li><li>Resolved a high-priority production bug using AWS CloudWatch and Firebase; added Firebase Cloud Messaging notifications.</li><li>Received a client appreciation email — the only one received within a 35-person team.</li></ul></article><article class="bg-card-dark rounded-xl p-6 md:p-8 border border-border-color"><h3 class="text-xl font-bold mb-2">Dwellin</h3><p class="text-primary text-sm mb-5">60k+ users · React Native mobile app &amp; React web app</p><ul class="list-disc pl-5 space-y-3 text-slate-300 leading-relaxed font-body"><li>Owned the mobile app, delivered 10+ major features, and published releases to Google Play and the App Store.</li><li>Reduced mobile app load time by approximately 20%. Set up Mixpanel, Firebase, MoEngage, and AppsFlyer for events, funnels, and A/B tests.</li><li>Built the 15-page Dwellin Pro Connect web app from scratch: architecture, authentication, routing, components, and API integration.</li></ul></article><article class="bg-card-dark rounded-xl p-6 md:p-8 border border-border-color"><h3 class="text-xl font-bold mb-2">European Athletics</h3><p class="text-primary text-sm mb-5">30k+ users · React Native &amp; React</p><ul class="list-disc pl-5 space-y-3 text-slate-300 leading-relaxed font-body"><li>Built 10–15 screens in the React Native app and made a similar level of contribution to the React website.</li></ul></article><article class="bg-card-dark rounded-xl p-6 md:p-8 border border-border-color"><h3 class="text-xl font-bold mb-2">Engineering practices &amp; recognition</h3><p class="text-primary text-sm mb-5">Across projects at Indexnine</p><ul class="list-disc pl-5 space-y-3 text-slate-300 leading-relaxed font-body"><li>Delivered 50+ screens and 50+ APIs across projects; wrote Jest tests with 85%+ coverage.</li><li>Built an AI agent for code scaffolding that made setup approximately 50% faster. Created a Cursor code review skill covering types, tests, lint, and coding standards.</li><li>Mentored junior engineers and conducted technical interviews.</li><li>Product Mindset Award; 2nd Runner-Up in the Agentic AI Hackathon, with an all-fresher team competing among 5+ experienced teams.</li></ul></article></div></section>
+        <section class="w-full max-w-[960px] px-6 md:px-10 py-16 scroll-mt-20" id="projects"><div class="flex items-center gap-4 mb-10"><h2 class="text-2xl md:text-3xl font-bold text-white">Personal Projects</h2><div class="h-px bg-border-color flex-grow"></div></div><p class="text-slate-400 mb-8">Independent assignment projects exploring orchestration, full-stack workflows, and offline reliability.</p><div class="grid md:grid-cols-2 gap-6"><article class="bg-card-dark rounded-xl border border-border-color p-6 flex flex-col"><p class="text-primary text-xs font-bold uppercase tracking-wider mb-3">Personal project</p><h3 class="text-xl font-bold mb-3">Hotel Offer Orchestrator</h3><p class="text-slate-300 leading-relaxed mb-5 flex-grow">Queries two suppliers in parallel, selects the cheapest offer per hotel, and stores winners in Redis with price filtering.</p><p class="text-sm text-slate-400 mb-6">TypeScript / Express · Temporal · Redis · Docker</p><div class="flex flex-wrap gap-4"><a class="text-primary font-semibold hover:underline" href="https://github.com/Kunal1796/Hotel-Offer-Orchestrator-" target="_blank" rel="noopener noreferrer">View Code ↗</a><a class="text-white font-semibold hover:underline" href="https://api-production-3801.up.railway.app/" target="_blank" rel="noopener noreferrer">Live API ↗</a></div></article><article class="bg-card-dark rounded-xl border border-border-color p-6 flex flex-col"><p class="text-primary text-xs font-bold uppercase tracking-wider mb-3">Personal project</p><h3 class="text-xl font-bold mb-3">ACME Salary Management</h3><p class="text-slate-300 leading-relaxed mb-5 flex-grow">Full-stack HR app with server-side pagination over a 10,000-employee dataset and pay-insights analytics.</p><p class="text-sm text-slate-400 mb-6">React / Vite · Node / Express · TypeScript · SQLite · Zod · Vitest</p><div class="flex flex-wrap gap-4"><a class="text-primary font-semibold hover:underline" href="https://github.com/Kunal1796/salary-management" target="_blank" rel="noopener noreferrer">View Code ↗</a><a class="text-white font-semibold hover:underline" href="https://salary-management-pwfn.onrender.com/" target="_blank" rel="noopener noreferrer">Live App ↗</a></div></article><article class="bg-card-dark rounded-xl border border-border-color p-6 flex flex-col"><p class="text-primary text-xs font-bold uppercase tracking-wider mb-3">Personal project</p><h3 class="text-xl font-bold mb-3">Durolt Kiosk</h3><p class="text-slate-300 leading-relaxed mb-5 flex-grow">Offline-first locker app with a SQLite-backed queue. Retries unlock commands with their original idempotency key when connectivity returns.</p><p class="text-sm text-slate-400 mb-6">React Native · SQLite · Jest</p><div class="flex flex-wrap gap-4"><a class="text-primary font-semibold hover:underline" href="https://github.com/Kunal1796/Durolt-Kiosk" target="_blank" rel="noopener noreferrer">View Code ↗</a></div></article></div></section>
+        <section class="w-full max-w-[960px] px-6 md:px-10 py-16 scroll-mt-20" id="skills"><div class="flex items-center gap-4 mb-10"><h2 class="text-2xl md:text-3xl font-bold text-white">Skills &amp; Technologies</h2><div class="h-px bg-border-color flex-grow"></div></div><div class="grid sm:grid-cols-2 gap-6"><article class="bg-card-dark border border-border-color rounded-xl p-6"><h3 class="font-bold text-lg mb-4">Frontend &amp; mobile</h3><p class="text-slate-300 leading-relaxed">React, React Native (Expo &amp; CLI), TypeScript, JavaScript, HTML/CSS, Tailwind, NativeWind, Redux, Zustand, React Query</p></article><article class="bg-card-dark border border-border-color rounded-xl p-6"><h3 class="font-bold text-lg mb-4">Backend &amp; data</h3><p class="text-slate-300 leading-relaxed">Node.js, Express, REST, GraphQL, MongoDB, SQLite, Redis, Temporal, JWT, OAuth</p></article><article class="bg-card-dark border border-border-color rounded-xl p-6"><h3 class="font-bold text-lg mb-4">Cloud &amp; integrations</h3><p class="text-slate-300 leading-relaxed">AWS (Lambda, Cognito, S3, CloudWatch), Firebase, Docker, Clover, Mixpanel, MoEngage, AppsFlyer</p></article><article class="bg-card-dark border border-border-color rounded-xl p-6"><h3 class="font-bold text-lg mb-4">Testing &amp; delivery</h3><p class="text-slate-300 leading-relaxed">Jest, Vitest, Chrome DevTools, Lighthouse, Git, Postman, Swagger, JIRA</p></article></div></section><section class="w-full max-w-[960px] px-6 md:px-10 py-16 scroll-mt-20" id="education"><div class="flex items-center gap-4 mb-10"><h2 class="text-2xl md:text-3xl font-bold text-white">Education &amp; Learning</h2><div class="h-px bg-border-color flex-grow"></div></div><div class="grid sm:grid-cols-2 gap-6"><article class="bg-card-dark rounded-xl p-6 md:p-8 border border-border-color"><h3 class="text-xl font-bold mb-2">B.Tech · Computer Engineering</h3><p class="text-primary text-sm mb-5">Vishwakarma University · 2023</p><ul class="list-disc pl-5 space-y-3 text-slate-300 leading-relaxed font-body"><li>Pune, India</li></ul></article><article class="bg-card-dark rounded-xl p-6 md:p-8 border border-border-color"><h3 class="text-xl font-bold mb-2">Java Spring Boot Full Stack</h3><p class="text-primary text-sm mb-5">Coding Ninjas · Aug 2026 – expected Oct 2026</p><ul class="list-disc pl-5 space-y-3 text-slate-300 leading-relaxed font-body"><li>Course in progress.</li></ul></article></div></section>
         <section class="w-full max-w-[960px] px-6 md:px-10 pb-20 scroll-mt-20" id="contact">
             <div class="flex items-center gap-4 mb-12">
                 <h2 class="text-2xl md:text-3xl font-bold text-white">Get In Touch</h2>
@@ -461,27 +109,26 @@
                     class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-50">
                 </div>
                 <div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Let's build something amazing together</h3>
+                    <h3 class="text-2xl font-bold text-white mb-4">Let’s talk about your engineering role</h3>
                     <p class="text-slate-400 mb-8 leading-relaxed font-body">
-                        I'm currently looking for new opportunities. Whether you have a project in mind, a question, or
-                        just want to say hi, I'll try my best to get back to you!
+                        Available immediately for React Native, React, MERN, and Forward Deployed Engineer opportunities. Share the role, team, and product you’re building.
                     </p>
                     <div class="space-y-6">
                         <div class="flex items-center gap-4 text-slate-300">
                             <div
                                 class="size-12 rounded-full bg-[#283039] border border-border-color flex items-center justify-center text-primary shrink-0">
-                                <span class="material-symbols-outlined">mail</span>
+                                <span aria-hidden="true">@</span>
                             </div>
                             <div>
                                 <span class="block text-xs text-slate-500 uppercase tracking-wider font-bold">Email
                                     Me</span>
-                                <span class="text-white font-medium">kunal.dd.dongare@gmail.com</span>
+                                <a class="text-white font-medium break-all hover:text-primary" href="mailto:kunal.dd.dongare@gmail.com">kunal.dd.dongare@gmail.com</a>
                             </div>
                         </div>
                         <div class="flex items-center gap-4 text-slate-300">
                             <div
                                 class="size-12 rounded-full bg-[#283039] border border-border-color flex items-center justify-center text-primary shrink-0">
-                                <span class="material-symbols-outlined">location_on</span>
+                                <span aria-hidden="true">↗</span>
                             </div>
                             <div>
                                 <span
@@ -491,17 +138,17 @@
                         </div>
                     </div>
                 </div>
-                <form class="space-y-4">
+                <form class="space-y-4" id="contact-form"><p class="text-sm text-slate-400">This form opens your email app with a draft.</p>
                     <div class="grid grid-cols-2 gap-4">
                         <div class="space-y-1">
-                            <label class="text-xs font-bold text-slate-500 uppercase">Name</label>
-                            <input id="contact-name"
+                            <label for="contact-message" for="contact-subject" for="contact-email" for="contact-name" class="text-xs font-bold text-slate-500 uppercase">Name</label>
+                            <input id="contact-name" required
                                 class="w-full bg-[#283039] border border-border-color rounded-lg px-4 py-3 text-white placeholder:text-slate-600 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
                                 placeholder="John Doe" type="text" />
                         </div>
                         <div class="space-y-1">
                             <label class="text-xs font-bold text-slate-500 uppercase">Email</label>
-                            <input id="contact-email"
+                            <input id="contact-email" required
                                 class="w-full bg-[#283039] border border-border-color rounded-lg px-4 py-3 text-white placeholder:text-slate-600 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
                                 placeholder="john@example.com" type="email" />
                         </div>
@@ -510,18 +157,18 @@
                         <label class="text-xs font-bold text-slate-500 uppercase">Subject</label>
                         <input id="contact-subject"
                             class="w-full bg-[#283039] border border-border-color rounded-lg px-4 py-3 text-white placeholder:text-slate-600 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
-                            placeholder="Project Discussion" type="text" />
+                            placeholder="Engineering Opportunity" type="text" />
                     </div>
                     <div class="space-y-1">
                         <label class="text-xs font-bold text-slate-500 uppercase">Message</label>
-                        <textarea id="contact-message"
+                        <textarea id="contact-message" required
                             class="w-full bg-[#283039] border border-border-color rounded-lg px-4 py-3 text-white placeholder:text-slate-600 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors resize-none"
-                            placeholder="Tell me about your project..." rows="4"></textarea>
+                            placeholder="Tell me about the role and your team..." rows="4"></textarea>
                     </div>
-                    <button onclick="sendEmail()"
+                    <button
                         class="w-full bg-primary hover:bg-blue-600 text-white font-bold py-3.5 rounded-lg transition-all shadow-lg shadow-blue-500/20 transform hover:translate-y-[-2px]"
-                        type="button">
-                        Send Message
+                        type="submit">
+                        Open Email Draft
                     </button>
                 </form>
             </div>
@@ -529,27 +176,35 @@
     </main>
     <footer class="bg-background-dark border-t border-border-color w-full mt-auto">
         <div class="max-w-[960px] mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
-            <p class="text-slate-500 text-sm font-medium order-2 md:order-1">© 2024 Kunal Dongare. All rights reserved.
+            <p class="text-slate-500 text-sm font-medium order-2 md:order-1">© 2026 Kunal Dongare. All rights reserved.
             </p>
             <div class="flex gap-6 order-1 md:order-2">
                 <a class="text-slate-500 hover:text-primary transition-colors transform hover:-translate-y-1 block"
                     href="https://github.com/Kunal1796" target="_blank" title="GitHub">
-                    <i class="fa-brands fa-github text-[24px]"></i>
+                    GitHub
                 </a>
-                <a class="text-slate-500 hover:text-primary transition-colors transform hover:-translate-y-1 block"
-                    href="https://www.instagram.com/kunaldongaree?igsh=NjdvZjJjdmhzdmw5&utm_source=qr" target="_blank"
-                    title="Instagram">
-                    <i class="fa-brands fa-instagram text-[24px]"></i>
-                </a>
+
                 <a class="text-slate-500 hover:text-primary transition-colors transform hover:-translate-y-1 block"
                     href="https://www.linkedin.com/in/kunal-dongare-636a85218/" target="_blank" title="LinkedIn">
-                    <i class="fa-brands fa-linkedin text-[24px]"></i>
+                    LinkedIn
                 </a>
             </div>
         </div>
     </footer>
 
     <script>
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            const nav = document.getElementById('mobile-nav');
+            const open = nav.classList.toggle('hidden') === false;
+            this.setAttribute('aria-expanded', String(open));
+            this.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+        });
+        document.querySelectorAll('#mobile-nav a').forEach(link => link.addEventListener('click', () => {
+            document.getElementById('mobile-nav').classList.add('hidden');
+            document.getElementById('menu-toggle').setAttribute('aria-expanded', 'false');
+            document.getElementById('menu-toggle').setAttribute('aria-label', 'Open navigation');
+        }));
+        document.getElementById('contact-form').addEventListener('submit', function (event) { event.preventDefault(); sendEmail(); });
         function sendEmail() {
             const name = document.getElementById('contact-name').value;
             const email = document.getElementById('contact-email').value;
